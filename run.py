@@ -1,4 +1,11 @@
-from scrapers.settings import BOOKMAKER_EMAIL
+from scrapers.scrapers import BookmakerScraper
 
 
-print(BOOKMAKER_EMAIL)
+def main():
+    bookmaker = BookmakerScraper()
+    result = bookmaker.scrape()
+    print(result)
+
+
+if __name__ == '__main__':
+    main()
